@@ -10602,7 +10602,7 @@ static void ufshcd_mgc_hibern8_work(struct work_struct *work)
 static void ufshcd_init_manual_gc(struct ufs_hba *hba)
 {
 	struct ufs_manual_gc *mgc = &hba->manual_gc;
-	char wq_name[sizeof("ufs_mgc_hibern8_work")];
+	char wq_name[sizeof("ufs_mgc_hibern8_work")+6];
 
 	if (!ufshcd_is_auto_hibern8_supported(hba)) {
 		hba->manual_gc.state = MANUAL_GC_DISABLE;

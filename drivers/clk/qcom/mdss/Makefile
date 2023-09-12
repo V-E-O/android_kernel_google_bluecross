@@ -6,4 +6,4 @@ obj-$(CONFIG_QCOM_MDSS_PLL) += mdss-dp-pll-10nm-util.o
 
 # TODO: remove me b/62058353
 subdir-ccflags-y += \
-	-Wno-unused-function \
+	-Wno-unused-function -I./drivers/clk/qcom/mdss \
